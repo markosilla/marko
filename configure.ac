@@ -1,24 +1,24 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ([2.68])
+AC_PREREQ([2.63])
 AC_INIT([MARKO], v0.1, [no-reply@ericsson.com])
 AM_INIT_AUTOMAKE(marko, 0.1)
-AC_CONFIG_SRCDIR([examples/cpp/helloworld/greeter_async_client.cc])
+AC_CONFIG_SRCDIR([examples/cpp/helloworld/greeter_server.cc])
 AC_CONFIG_HEADERS([config.h])
+AC_USE_SYSTEM_EXTENSIONS
+AC_GNU_SOURCE
 LT_INIT
 
 # Checks for programs.
 AC_CONFIG_MACRO_DIR([m4])
-AC_PROG_CXX
-AC_PROG_AWK
-AC_PROG_CC
-AC_PROG_CPP
+AC_PROG_LIBTOOL
 AC_PROG_INSTALL
+AC_PROG_CC
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
-AC_PROG_OBJC
-AC_PROG_RANLIB
+AC_PROG_CXX
+
 
 
 # Checks for libraries.
@@ -77,6 +77,11 @@ AC_FUNC_REALLOC
 AC_FUNC_STRNLEN
 AC_FUNC_STRTOD
 AC_CHECK_FUNCS([alarm atexit clock_gettime gethostname gettimeofday localtime_r memchr memmove memset mkdir modf pow putenv regcomp select setenv socket sqrt strcasecmp strchr strdup strerror strncasecmp strrchr strstr strtol strtoul strtoull])
+
+# Some additional CFLAGS
+AM_CFLAGS="$AM_CFLAGS -std=gnu99 -funwind-tables -fno-omit-frame-pointer -Wall -Wextra -Werror"
+AC_SUBST([AM_CFLAGS])
+
 
 AC_CONFIG_FILES([Makefile
 				examples/cpp/helloworld/Makefile])
