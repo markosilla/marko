@@ -77,7 +77,6 @@ AC_FUNC_STRTOD
 AC_CHECK_FUNCS([alarm atexit clock_gettime gethostname gettimeofday localtime_r memchr memmove memset mkdir modf pow putenv regcomp select setenv socket sqrt strcasecmp strchr strdup strerror strncasecmp strrchr strstr strtol strtoul strtoull])
 
 AC_CONFIG_FILES([Makefile
-				examples/cpp/helloworld/Makefile
-				examples/cpp/route_guide/Makefile])
+				examples/cpp/helloworld/Makefile])
 
 AC_OUTPUT
