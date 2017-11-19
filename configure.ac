@@ -6,6 +6,7 @@ AC_INIT([MARKO], v0.1, [no-reply@ericsson.com])
 AM_INIT_AUTOMAKE(marko, 0.1)
 AC_CONFIG_SRCDIR([examples/cpp/helloworld/greeter_async_client.cc])
 AC_CONFIG_HEADERS([config.h])
+LT_INIT
 
 # Checks for programs.
 AC_CONFIG_MACRO_DIR([m4])
@@ -18,6 +19,7 @@ AC_PROG_LN_S
 AC_PROG_MAKE_SET
 AC_PROG_OBJC
 AC_PROG_RANLIB
+
 
 # Checks for libraries.
 # FIXME: Replace `main' with a function in `-lFuzzer':

@@ -1,7 +1,7 @@
 #AM_CPPFLAGS  = -I$(top_srcdir)/include
 #AM_CPPFLAGS += -I$(top_srcdir)/emtest/include
 
-bin_PROGRAMS = helloworld
+bin_PROGRAMS = greeter_server
 
 helloworld_SOURCES = greeter_server.cc
 
