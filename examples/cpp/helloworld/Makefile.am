@@ -3,7 +3,7 @@
 
 bin_PROGRAMS = helloworld
 
-helloworld_SOURCES += greeter_server.cc
+helloworld_SOURCES = greeter_server.cc
 
 helloworld_LDFLAGS = -lcares -lgpr -lgrpc -lgrpc_cronet -lgrpc_unsecure -lprofiler -lprotobuf -lz
 
