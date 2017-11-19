@@ -3,8 +3,8 @@
 
 bin_PROGRAMS = greeter_server
 
-helloworld_SOURCES = greeter_server.cc
+greeter_server_SOURCES = greeter_server.cc
 
-helloworld_LDFLAGS = -lcares -lgpr -lgrpc -lgrpc_cronet -lgrpc_unsecure -lprofiler -lprotobuf -lz
+greeter_server_LDFLAGS = -lcares -lgpr -lgrpc -lgrpc_cronet -lgrpc_unsecure -lprofiler -lprotobuf -lz
 
-helloworld_CFLAGS  = @AM_CFLAGS@
+greeter_server_CFLAGS  = @AM_CFLAGS@
